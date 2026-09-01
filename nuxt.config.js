@@ -1,3 +1,5 @@
+const base = process.env.GITHUB_ACTIONS ? '/haide/' : '/'
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -13,8 +15,10 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: `${base}favicon.ico` }],
   },
+
+  router: { base },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],

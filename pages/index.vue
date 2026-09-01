@@ -1,10 +1,11 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">Haide.io</h1>
+  <main class="container">
+    <div class="content">
+      <h1 class="title">Haide</h1>
+      <p>Coming soon.</p>
     </div>
-  </div>
+    <footer>© 2026 Amihan Technologies</footer>
+  </main>
 </template>
 
 <script>
@@ -16,7 +17,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Modern and Smarter Healthcare for Everyone.',
+          content: 'Haide is coming soon.',
         },
       ],
     }
@@ -25,27 +26,38 @@ export default {
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
 .container {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+}
+
+.content {
+  margin: auto;
   text-align: center;
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
-  font-weight: 300;
-  font-size: 100px;
+  font-weight: 600;
+  font-size: 4rem;
   color: #35495e;
-  letter-spacing: 1px;
+  letter-spacing: 0.05em;
+}
+
+p {
+  color: #64748b;
+  font-size: 1.125rem;
+}
+
+footer {
+  padding: 1.5rem;
+  color: #94a3b8;
+  font-size: 0.875rem;
+  text-align: center;
 }
 </style>
